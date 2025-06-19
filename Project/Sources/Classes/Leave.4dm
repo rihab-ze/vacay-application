@@ -71,7 +71,7 @@ exposed Function filtering($selectedType : cs:C1710.LeaveTypeEntity; $employee :
 		: (($selectedType#Null:C1517) && (($employee#Null:C1517)))
 			return This:C1470.query("employee.fullName = :1 and leaveType.name = :2"; $employee.fullName; $selectedType.name)
 		: (($selectedType#Null:C1517) && (($status#"") && ($status#Null:C1517)))
-			return This:C1470.query("status = :1 and leaveType.name = :2"; status; $selectedType.name)
+			return This:C1470.query("status = :1 and leaveType.name = :2"; $status; $selectedType.name)
 		: (($employee#Null:C1517) && (($status#"") && ($status#Null:C1517)))
 			return This:C1470.query("employee.fullName = :1 and status = :2"; $employee.fullName; $status)
 		: ((($selectedType#Null:C1517)))

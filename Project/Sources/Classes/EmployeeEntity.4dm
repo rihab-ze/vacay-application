@@ -42,7 +42,7 @@ exposed Function getBalanceChart()->$pieChart : Collection
 	
 exposed Function getBalance($leaveType : cs:C1710.LeaveTypeEntity) : cs:C1710.LeaveBalanceEntity
 	var $leave : cs:C1710.LeaveTypeEntity
-	If ($leaveType !=Null:C1517)
+	If ($leaveType#Null:C1517)
 		$leave:=This:C1470.leaveBalances.leaveType.query("name = :1"; $leaveType.name).first()
 		If ($leave#Null:C1517)
 			return $leave.leaveBalances.query("employee.ID = :1"; This:C1470.ID).first()
@@ -53,7 +53,7 @@ exposed Function getBalance($leaveType : cs:C1710.LeaveTypeEntity) : cs:C1710.Le
 	End if 
 	
 exposed Function editBalance($leaveType : cs:C1710.LeaveTypeEntity; $balance : Integer)
-	var $leaveT : cs:C1710.LeaveTypeEntity:=This:C1470.leaveBalances.leaveType.query("name = :1"; leaveType.name).first()
+	var $leaveT : cs:C1710.LeaveTypeEntity:=This:C1470.leaveBalances.leaveType.query("name = :1"; $leaveType.name).first()
 	var $leaveBalance : cs:C1710.LeaveBalanceEntity
 	If ($leaveT#Null:C1517)
 		$leaveBalance:=$leaveT.leaveBalances.query("employee.ID = :1"; This:C1470.ID).first()

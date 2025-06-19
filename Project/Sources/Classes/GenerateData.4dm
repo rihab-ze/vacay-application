@@ -10,12 +10,12 @@ Function dropData()
 	$trash:=ds:C1482.LeaveType.all().drop()
 	$trash:=ds:C1482.Holiday.all().drop()
 	$trash:=ds:C1482.Team.all().drop()
-	$trash:=ds:C1482.LeaveBalances.all().drop()
-	$trash:=ds:C1482.Leaves.all().drop()
-	$trash:=ds:C1482.Comments.all().drop()
-	$trash:=ds:C1482.LeaveActions.all().drop()
+	$trash:=ds:C1482.LeaveBalance.all().drop()
+	$trash:=ds:C1482.Leave.all().drop()
+	$trash:=ds:C1482.Comment.all().drop()
+	$trash:=ds:C1482.LeaveAction.all().drop()
 	$trash:=ds:C1482.LeaveHistory.all().drop()
-	$trash:=ds:C1482.LeaveNotifications.all().drop()
+	$trash:=ds:C1482.LeaveNotification.all().drop()
 	
 	
 Function createData()
@@ -32,8 +32,7 @@ Function createData()
 	
 Function generateUsers()
 	
-	var $newUser : cs:C1710.EmployeeEntity
-	
+	var $employee : cs:C1710.EmployeeEntity
 	var $users : Collection:=[\
 		{firstName: "John"; lastName: "Smith"; password: "a1b2c3"; email: "john.smith@example.com"; role: "Admin"}; \
 		{firstName: "Alice"; lastName: "Johnson"; password: "d4e5f6"; email: "alice.johnson@example.com"; role: "Manager"}; \
@@ -124,7 +123,7 @@ Function generateTeams()
 	var $team : cs:C1710.TeamEntity
 	$teams:=["4D Product-QA"; "4D Product Customer Support"; "SI 4D"; "PS 4D"; "Administration service"; "4D Product RD - Web Studio"; "Cloud"]
 	var $managers : cs:C1710.EmployeeSelection:=ds:C1482.Employee.query("role == 'Manager'")
-	$managers:=managers.length#0 ? $managers : ds:C1482.Employee.query("role = 'Admin")
+	$managers:=$managers.length#0 ? $managers : ds:C1482.Employee.query("role = 'Admin")
 	For each ($item; $teams)
 		$team:=ds:C1482.Teams.new()
 		$team.name:=$item
