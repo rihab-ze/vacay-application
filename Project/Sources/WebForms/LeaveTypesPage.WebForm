@@ -71,22 +71,19 @@
 				"name": "hoverDelete",
 				"content": "self:hover{\n\tcolor : rgb(204, 27, 27) !important;\n}",
 				"parentId": null,
-				"id": "I9HXSU-flCf7GYJ2dHCdo",
-				"scope": "local"
+				"id": "I9HXSU-flCf7GYJ2dHCdo"
 			},
 			{
 				"name": "titleEllipssis",
 				"content": "self {\n\tdisplay: -webkit-box;\n    -webkit-box-orient: vertical;\n    overflow: hidden;\n    -webkit-line-clamp: 1;\n\ttext-overflow: ellipsis;\n    max-width: 300px;\n}",
 				"parentId": null,
-				"id": "x0Z-7C5CShRVDS4sutoZL",
-				"scope": "local"
+				"id": "x0Z-7C5CShRVDS4sutoZL"
 			},
 			{
 				"name": "stylingTypes",
 				"content": "self {\n\tborder-left: solid 6px;\n\tborder-color: var(--borderColor);\n}",
 				"parentId": null,
-				"id": "j3qXN6e3n1oQ37_Sn0Oyb",
-				"scope": "local"
+				"id": "j3qXN6e3n1oQ37_Sn0Oyb"
 			}
 		]
 	},
@@ -1034,7 +1031,7 @@
 			"parent": "uwljlfTWDB",
 			"hidden": false,
 			"nodes": [
-				"1oZv41iCBD",
+				"Z1o2ym_aSu",
 				"yP8OuYLCfr"
 			],
 			"linkedNodes": {}
@@ -1049,7 +1046,10 @@
 				"placeholder": "placeholder",
 				"label": "label",
 				"labelPosition": "hidden",
-				"iterableChild": true
+				"iterableChild": true,
+				"style": {
+					"width": "200px"
+				}
 			},
 			"displayName": "Text Input",
 			"custom": {},
@@ -1097,7 +1097,8 @@
 					"borderRadius": "6px"
 				},
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"intervals": []
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1128,7 +1129,7 @@
 			"parent": "DGrhmJGIAM",
 			"hidden": false,
 			"nodes": [
-				"IIcRhIJZmH",
+				"5GeiCb3NdP",
 				"EVf_70V0iW"
 			],
 			"linkedNodes": {}
@@ -1634,48 +1635,6 @@
 			],
 			"linkedNodes": {}
 		},
-		"1oZv41iCBD": {
-			"type": {
-				"resolvedName": "Fallback"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"componentName": "Fallback",
-				"name": "",
-				"defaultColor": "#000000",
-				"datasource": "leaveType.color",
-				"text": "Some Text"
-			},
-			"displayName": "Fallback",
-			"custom": {},
-			"parent": "ALpq8o6xo2",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"IIcRhIJZmH": {
-			"type": {
-				"resolvedName": "Fallback"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"componentName": "Fallback",
-				"name": "",
-				"defaultColor": "#000000",
-				"datasource": "newLeaveType.color",
-				"text": "Some Text"
-			},
-			"displayName": "Fallback",
-			"custom": {},
-			"parent": "vOv3GZpnwa",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"rci8xahnDQ": {
 			"type": {
 				"resolvedName": "StylishBox"
@@ -2024,7 +1983,8 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"intervals": []
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2144,6 +2104,44 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "Fd7BKf749N",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"5GeiCb3NdP": {
+			"type": {
+				"resolvedName": "ColorInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"name": "",
+				"classNames": [],
+				"events": [],
+				"defaultColor": "#000000",
+				"datasource": "newLeaveType.color"
+			},
+			"displayName": "Color Input",
+			"custom": {},
+			"parent": "vOv3GZpnwa",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Z1o2ym_aSu": {
+			"type": {
+				"resolvedName": "ColorInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"name": "",
+				"classNames": [],
+				"events": [],
+				"defaultColor": "#000000",
+				"datasource": "leaveType.color"
+			},
+			"displayName": "Color Input",
+			"custom": {},
+			"parent": "ALpq8o6xo2",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

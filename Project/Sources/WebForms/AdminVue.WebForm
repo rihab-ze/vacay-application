@@ -125,7 +125,8 @@
 			"parent": "DVBT9Xs-kQ",
 			"hidden": false,
 			"nodes": [
-				"cx8pjAnO2B"
+				"cx8pjAnO2B",
+				"noKnJOep0T"
 			],
 			"linkedNodes": {}
 		},
@@ -907,6 +908,635 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "8H2DNYK5AI",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"noKnJOep0T": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"gap": "10px",
+					"alignItems": "center"
+				},
+				"serverSideRef": "mobile",
+				"classNames": [
+					"visibility"
+				],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "c_H0Iix0wr",
+			"hidden": false,
+			"nodes": [
+				"yhY-UmKH5S",
+				"UUjxO9vAN-",
+				"Hp9UT4A4Hk",
+				"q_P2CCU3dd",
+				"nB2mgAl1-4"
+			],
+			"linkedNodes": {}
+		},
+		"yhY-UmKH5S": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [
+					"activeNavButton"
+				],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "f5cfHev2pyX8MxNPQACsYo",
+						"method": "ds.navbar",
+						"params": [
+							{
+								"name": "serverRef",
+								"type": "string",
+								"datasource": "",
+								"id": "qdSXrmvFUFrSiqLTXw4hTp",
+								"isHardCoded": true,
+								"hardCodedValue": "dashBoard"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					},
+					{
+						"type": "navigation",
+						"id": "hUkZKhGNYURsi361MsR2o6",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "kFrXv8tqwq",
+						"parent": "webform-loader",
+						"target": "Dashboard"
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "78v34cCUNaxnWW7dCQ4Ykm",
+						"method": "ds.breadcrumbs",
+						"params": [
+							{
+								"name": "path",
+								"type": "string",
+								"datasource": "",
+								"id": "dzcLnTGH5QwJU1XtWfzKJJ",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Dashboard"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "string",
+							"datasource": "UI:breadchrumbs"
+						}
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "transparent",
+					"color": "#A0AEC0",
+					"justifyContent": "space-between",
+					"height": "54px",
+					"borderRadius": "15px",
+					"width": "fit-content"
+				},
+				"serverSideRef": "dashBoard"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "noKnJOep0T",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "AQ22EIS7co"
+			}
+		},
+		"AQ22EIS7co": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-chart-column",
+				"style": {
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"color": "#FFF",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "yhY-UmKH5S",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"UUjxO9vAN-": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "oioXuv3VNZFMJdBYpuMkvi",
+						"method": "ds.navbar",
+						"params": [
+							{
+								"name": "serverRef",
+								"type": "string",
+								"datasource": "",
+								"id": "oVgSZDArTACRKg93XLBXs4",
+								"isHardCoded": true,
+								"hardCodedValue": "requests"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					},
+					{
+						"type": "navigation",
+						"id": "hUkZKhGNYURsi361MsR2o6",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "kFrXv8tqwq",
+						"parent": "webform-loader",
+						"target": "LeavesList"
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "quDp38Ptb3CzrF2WD8nEK6",
+						"method": "ds.breadcrumbs",
+						"params": [
+							{
+								"name": "path",
+								"type": "string",
+								"datasource": "",
+								"id": "huyrwFJeR5dNRCTMCoevwx",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Requests"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "string",
+							"datasource": "UI:breadchrumbs"
+						}
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "transparent",
+					"color": "#A0AEC0",
+					"justifyContent": "center",
+					"height": "54px",
+					"borderRadius": "15px"
+				},
+				"serverSideRef": "requests"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "noKnJOep0T",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "vgelYaPvjO"
+			}
+		},
+		"vgelYaPvjO": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-bullhorn",
+				"style": {
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"color": "#FFF",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "UUjxO9vAN-",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Hp9UT4A4Hk": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "oioXuv3VNZFMJdBYpuMkvi",
+						"method": "ds.navbar",
+						"params": [
+							{
+								"name": "serverRef",
+								"type": "string",
+								"datasource": "",
+								"id": "oVgSZDArTACRKg93XLBXs4",
+								"isHardCoded": true,
+								"hardCodedValue": "calendar"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					},
+					{
+						"type": "navigation",
+						"id": "hUkZKhGNYURsi361MsR2o6",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "kFrXv8tqwq",
+						"parent": "webform-loader",
+						"target": "Calendar"
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "pQzHkBymhftfrrr3j6MCat",
+						"method": "ds.breadcrumbs",
+						"params": [
+							{
+								"name": "path",
+								"type": "string",
+								"datasource": "",
+								"id": "qHUv4k9hqvfWa7SzbuY7ix",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Calendar"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "string",
+							"datasource": "UI:breadchrumbs"
+						}
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "transparent",
+					"color": "#A0AEC0",
+					"justifyContent": "space-between",
+					"height": "54px",
+					"borderRadius": "15px",
+					"width": "fit-content"
+				},
+				"serverSideRef": "calendar"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "noKnJOep0T",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "SSr0OcVPzc"
+			}
+		},
+		"SSr0OcVPzc": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-calendar-day",
+				"style": {
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"color": "#FFF",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "Hp9UT4A4Hk",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"q_P2CCU3dd": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "h98gLQcaUhNB2VgsKhuVEL",
+						"method": "ds.navbar",
+						"params": [
+							{
+								"name": "serverRef",
+								"type": "string",
+								"datasource": "users",
+								"id": "o1hmotEY4uE3yb4Y365Tec",
+								"isHardCoded": true,
+								"hardCodedValue": "users"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					},
+					{
+						"type": "navigation",
+						"id": "hUkZKhGNYURsi361MsR2o6",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "kFrXv8tqwq",
+						"parent": "webform-loader",
+						"target": "EmployeeList"
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "nq2Ngtph2p7S2BeFuSETbB",
+						"method": "ds.breadcrumbs",
+						"params": [
+							{
+								"name": "path",
+								"type": "string",
+								"datasource": "",
+								"id": "c3ydHtxdj2G8813kMj6tzo",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Employees"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "string",
+							"datasource": "UI:breadchrumbs"
+						}
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "transparent",
+					"color": "#A0AEC0",
+					"justifyContent": "space-between",
+					"height": "54px",
+					"borderRadius": "15px",
+					"width": "fit-content"
+				},
+				"serverSideRef": "users"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "noKnJOep0T",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "AHiJko1Zcn"
+			}
+		},
+		"AHiJko1Zcn": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-user-group",
+				"style": {
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"color": "#FFF",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "q_P2CCU3dd",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"nB2mgAl1-4": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "mNSufcf4jKjW9fa4fZQ9Kw",
+						"method": "ds.navbar",
+						"params": [
+							{
+								"name": "serverRef",
+								"type": "string",
+								"datasource": "",
+								"id": "8gLTx2mTe8v3ctp5Agv1ju",
+								"isHardCoded": true,
+								"hardCodedValue": "settings"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					},
+					{
+						"type": "navigation",
+						"id": "hUkZKhGNYURsi361MsR2o6",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "kFrXv8tqwq",
+						"parent": "webform-loader",
+						"isHardCoded": true,
+						"target": "Settings"
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"onclick"
+						],
+						"id": "13ADy8gbcNPg2ymuRBkev7",
+						"method": "ds.breadcrumbs",
+						"params": [
+							{
+								"name": "path",
+								"type": "string",
+								"datasource": "",
+								"id": "cbWcvzHQKtYn8GL9UjXJXQ",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": "Settings"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "string",
+							"datasource": "UI:breadchrumbs"
+						}
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "transparent",
+					"color": "#A0AEC0",
+					"justifyContent": "space-between",
+					"height": "54px",
+					"borderRadius": "15px",
+					"width": "fit-content"
+				},
+				"serverSideRef": "settings"
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "noKnJOep0T",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "NjtycG_cXu"
+			}
+		},
+		"NjtycG_cXu": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-gear",
+				"style": {
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"color": "#FFF",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "nB2mgAl1-4",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

@@ -1,0 +1,12 @@
+{
+  "name": "qodly_color_input",
+  "version": "0.2.2",
+  "scope": "qodly_882b282cbd97a14c33c0",
+  "author": {
+    "name": "Qodly Team",
+    "email": "contact@qodly.com",
+    "url": "https://qodly.com"
+  },
+  "module": "components",
+  "remoteEntryFileName": "components.js"
+}
