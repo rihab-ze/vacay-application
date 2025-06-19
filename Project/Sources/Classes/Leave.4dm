@@ -45,7 +45,7 @@ exposed Function add($employee : cs:C1710.EmployeeEntity; $leaveBalance : cs:C17
 				$action:=$newLeave.employee.fullName+" created the leave <b>"+$newLeave.leaveType.name+" - "+$newLeave.employee.fullName+"</b> :<br><ul><li>Request Date : "\
 					+String:C10($newLeave.requestDate; Internal date short:K1:7)+"</li><li>Start Date : "+String:C10($newLeave.startDate; Internal date short:K1:7)+\
 					"</li><li>End Date : "+String:C10($newLeave.endDate; Internal date short:K1:7)+"</li><li>Status : <span style=\"color:#ECB22E;\">"+$newLeave.status+"</span></li></ul>"
-				//CALL WORKER("workerTest"; Formula(cs.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
+				CALL WORKER:C1389("workerTest"; Formula:C1597(cs:C1710.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
 			End if 
 	End case 
 	return $newLeave

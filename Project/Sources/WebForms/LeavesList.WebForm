@@ -424,7 +424,7 @@
 				"classNames": [
 					"selectInputCss"
 				],
-				"showEmptyOption": true
+				"showEmptyOption": false
 			},
 			"displayName": "Select",
 			"custom": {},
