@@ -125,7 +125,7 @@ Function generateTeams()
 	var $managers : cs:C1710.EmployeeSelection:=ds:C1482.Employee.query("role == 'Manager'")
 	$managers:=$managers.length#0 ? $managers : ds:C1482.Employee.query("role = 'Admin")
 	For each ($item; $teams)
-		$team:=ds:C1482.Teams.new()
+		$team:=ds:C1482.Team.new()
 		$team.name:=$item
 		$team.manager:=$managers.at(Random:C100%$managers.length)
 		$team.save()
@@ -140,7 +140,7 @@ Function generateLeaveBalances()
 	
 	For each ($user; $users)
 		For each ($LeaveType; $LeaveTypes)
-			$leaveBalance:=ds:C1482.LeaveBalances.new()
+			$leaveBalance:=ds:C1482.LeaveBalance.new()
 			$leaveBalance.employee:=$user
 			$leaveBalance.leaveType:=$LeaveType
 			$leaveBalance.balance:=(Random:C100%(16-4+1))+4

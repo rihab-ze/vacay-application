@@ -2,7 +2,6 @@ Class extends DataClass
 
 
 exposed Function add($employee : cs:C1710.EmployeeEntity; $leaveBalance : cs:C1710.LeaveBalanceEntity; $rangeDate : Collection; $newLeave : cs:C1710.LeaveEntity; $initialLength : Variant) : cs:C1710.LeaveEntity
-	TRACE:C157
 	var $info : Object
 	var $action : Text
 	var $receiver : Text:=String:C10($employee.email)+";"+String:C10($employee.team.manager.email)
@@ -41,12 +40,12 @@ exposed Function add($employee : cs:C1710.EmployeeEntity; $leaveBalance : cs:C17
 			If ($info.success)
 				$employee.reload()
 				Web Form:C1735.setMessage("The leave request has been successfully created!")
-				ds:C1482.LeaveActions.add($employee; $newLeave; Current date:C33(); "creation")
+				ds:C1482.LeaveAction.add($employee; $newLeave; Current date:C33(); "creation")
 				Web Form:C1735["declareLeave"].hide()
 				$action:=$newLeave.employee.fullName+" created the leave <b>"+$newLeave.leaveType.name+" - "+$newLeave.employee.fullName+"</b> :<br><ul><li>Request Date : "\
 					+String:C10($newLeave.requestDate; Internal date short:K1:7)+"</li><li>Start Date : "+String:C10($newLeave.startDate; Internal date short:K1:7)+\
 					"</li><li>End Date : "+String:C10($newLeave.endDate; Internal date short:K1:7)+"</li><li>Status : <span style=\"color:#ECB22E;\">"+$newLeave.status+"</span></li></ul>"
-				CALL WORKER:C1389("workerTest"; Formula:C1597(cs:C1710.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
+				//CALL WORKER("workerTest"; Formula(cs.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
 			End if 
 	End case 
 	return $newLeave
@@ -58,7 +57,7 @@ exposed Function teamLeaves($employee : cs:C1710.EmployeeEntity)->$leaves : cs:C
 	End if 
 	
 exposed Function allLeaves()->$leaves : cs:C1710.LeaveSelection
-	$leaves:=ds:C1482.Leaves.all()
+	$leaves:=ds:C1482.Leave.all()
 	
 exposed Function filtering($selectedType : cs:C1710.LeaveTypeEntity; $employee : cs:C1710.EmployeeEntity; $status : Variant) : cs:C1710.LeaveSelection
 	var $currentUser : cs:C1710.EmployeeEntity:=ds:C1482.Employee.getCurrentUser()
@@ -122,14 +121,14 @@ exposed Function getRangeLength($dateRange : Collection) : Integer
 	If ($dateRange.length=2)
 		$newDate:=$dateRange[0]
 		While ($newDate<=$dateRange[1])
-			If ((Day number:C114($newDate)#1) && (Day number:C114($newDate)#7) && (ds:C1482.Holidays.all().query("startDate <= :1  and endDate >= :1"; $newDate).length=0))
+			If ((Day number:C114($newDate)#1) && (Day number:C114($newDate)#7) && (ds:C1482.Holiday.all().query("startDate <= :1  and endDate >= :1"; $newDate).length=0))
 				$colLength+=1
 			End if 
 			$newDate:=Add to date:C393($newDate; 0; 0; 1)
 		End while 
 	End if 
 	If ($dateRange.length=1)
-		If ((Day number:C114($newDate)#1) && (Day number:C114($newDate)#7) && (ds:C1482.Holidays.all().query("startDate <= :1  and endDate >= :1"; $newDate).length=0))
+		If ((Day number:C114($newDate)#1) && (Day number:C114($newDate)#7) && (ds:C1482.Holiday.query("startDate <= :1  and endDate >= :1"; $newDate).length=0))
 			$colLength+=1
 		End if 
 	End if 

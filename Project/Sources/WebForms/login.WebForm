@@ -256,7 +256,7 @@
 				"events": [],
 				"deletable": false,
 				"className": "w-full bg-transparent",
-				"type": "text",
+				"type": "password",
 				"datasource": "pwd",
 				"moveable": false,
 				"placeholder": "Input your password",
