@@ -6,13 +6,13 @@ exposed Function create($newLeave : cs:C1710.LeaveEntity)
 	If (This:C1470.content#Null:C1517)
 		This:C1470.creationDate:=Current date:C33()
 		This:C1470.creationHour:=Current time:C178()
-		eThis.leave:=$newLeave
+		This:C1470.leave:=$newLeave
 		This:C1470.by:=ds:C1482.Employee.getCurrentUser()
 		$saved:=This:C1470.save()
-		If (saved.success)
-			webForm.setMessage("Comment added successfully!")
+		If ($saved.success)
+			Web Form:C1735.setMessage("Comment added successfully!")
 		Else 
-			webForm.setError("Error while adding the comment!")
+			Web Form:C1735.setError("Error while adding the comment!")
 		End if 
 	End if 
 	

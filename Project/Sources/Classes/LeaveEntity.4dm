@@ -24,7 +24,7 @@ exposed Function changeStatus($employee : cs:C1710.EmployeeEntity; $status : Tex
 			+String:C10(This:C1470.requestDate; Internal date short:K1:7)+"</li><li>Start Date : "+String:C10(This:C1470.startDate; Internal date short:K1:7)+\
 			"</li><li>End Date : "+String:C10(This:C1470.endDate; Internal date short:K1:7)+"</li><li>Status : <span style=\"color:#F44C4C;\">"+This:C1470.status+"</span></li></ul>"
 		If ($status="rejected")
-			This:C1470.status:=status
+			This:C1470.status:=$status
 		End if 
 	End if 
 	$info:=This:C1470.save()

@@ -35,11 +35,11 @@ exposed Function filterByTeam($team : cs:C1710.TeamEntity; $currentUser : cs:C17
 exposed Function filterEmployees($team : cs:C1710.TeamEntity; $userName : Text) : cs:C1710.EmployeeSelection
 	Case of 
 		: (($team#Null:C1517) && ($userName#""))
-			return This:C1470.query("fullName = :1 && team.name = :2"; "@"+userName+"@"; team.name)
-		: (($team#Null:C1517) && (userName=""))
-			return This:C1470.query("team.name = :1"; team.name)
-		: (($team=Null:C1517) && (userName#""))
-			return This:C1470.query("fullName = :1"; "@"+userName+"@")
+			return This:C1470.query("fullName = :1 && team.name = :2"; "@"+$userName+"@"; $team.name)
+		: (($team#Null:C1517) && ($userName=""))
+			return This:C1470.query("team.name = :1"; $team.name)
+		: (($team=Null:C1517) && ($userName#""))
+			return This:C1470.query("fullName = :1"; "@"+$userName+"@")
 		Else 
 			return This:C1470.all()
 	End case 

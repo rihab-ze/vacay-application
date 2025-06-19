@@ -2,7 +2,7 @@ Class extends DataStoreImplementation
 
 
 exposed Function authentify($email : Text; $password : Text) : Boolean
-	$employee:=ds:C1482.Employee.query("email = :1"; $email).first()
+	var $employee : cs:C1710.EmployeeEntity:=ds:C1482.Employee.query("email = :1"; $email).first()
 	If ($employee#Null:C1517)
 		If (Verify password hash:C1534($password; $employee.password))
 			Use (Session:C1714.storage)
