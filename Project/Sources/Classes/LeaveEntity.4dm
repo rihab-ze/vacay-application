@@ -13,6 +13,7 @@ exposed Function changeStatus($employee : cs:C1710.EmployeeEntity; $status : Tex
 	var $leaveBalance : cs:C1710.LeaveBalanceEntity:=This:C1470.leaveType.leaveBalances.query("employee.ID = :1"; $employee.ID).first()
 	If (($leaveBalance.balance>=This:C1470.rangeLength) && ($status="approved"))
 		This:C1470.status:=$status
+		TRACE:C157
 		$action:=$currentUser.fullName+" approved the leave <b>"+This:C1470.leaveType.name+"-"+This:C1470.employee.fullName+"</b> : <br><ul><li>Request Date : "\
 			+String:C10(This:C1470.requestDate; Internal date short:K1:7)+"</li><li>Start Date : "+String:C10(This:C1470.startDate; Internal date short:K1:7)+\
 			"</li><li>End Date : "+String:C10(This:C1470.endDate; Internal date short:K1:7)+"</li><li>Status : <span style=\"color:#119A8D;\">"+This:C1470.status+"</span></li></ul>"
@@ -20,6 +21,7 @@ exposed Function changeStatus($employee : cs:C1710.EmployeeEntity; $status : Tex
 	Else 
 		Web Form:C1735.setError("Your balance is lower then the request's range")
 		This:C1470.status:="rejected"
+		TRACE:C157
 		$action:=$currentUser.fullName+" rejected the leave <b>"+This:C1470.leaveType.name+"-"+This:C1470.employee.fullName+"</b> : <br><ul><li>Request Date : "\
 			+String:C10(This:C1470.requestDate; Internal date short:K1:7)+"</li><li>Start Date : "+String:C10(This:C1470.startDate; Internal date short:K1:7)+\
 			"</li><li>End Date : "+String:C10(This:C1470.endDate; Internal date short:K1:7)+"</li><li>Status : <span style=\"color:#F44C4C;\">"+This:C1470.status+"</span></li></ul>"
@@ -32,7 +34,7 @@ exposed Function changeStatus($employee : cs:C1710.EmployeeEntity; $status : Tex
 		Web Form:C1735.setMessage("This leave has been successfully updated!")
 		ds:C1482.LeaveAction.add($employee; This:C1470; Current date:C33(); $status)
 		$receiver:=String:C10(This:C1470.employee.email)+";"+String:C10(This:C1470.employee.team.manager.email)
-		//CALL WORKER("workerTest"; Formula(cs.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
+		CALL WORKER:C1389("workerTest"; Formula:C1597(cs:C1710.Mailing.me.sendMails("Status Update"; $action; $receiver)))  //setup mailing class
 	End if 
 	
 	

@@ -1507,6 +1507,18 @@
 						"datasource": {
 							"name": ""
 						}
+					},
+					{
+						"type": "navigation",
+						"id": "aZZinwZ5i4CsrXFf9juwxX",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "login",
+						"isHardCoded": true
 					}
 				],
 				"icon": "fa-solid fa-arrow-right-from-bracket",
@@ -1518,7 +1530,8 @@
 					"display": "flex",
 					"justifyContent": "center",
 					"alignItems": "center",
-					"borderRadius": "10px"
+					"borderRadius": "10px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Icon",

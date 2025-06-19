@@ -148,8 +148,12 @@ exposed Function getCredentials() : Object
 	var $text : Text
 	var $fileContent : Object
 	$jsonFile:=File:C1566("/PROJECT/Sources/Shared/assets/credentials/env.json")  //fill the json file with your sendGrid api credentials
-	$text:=$jsonFile.getText()
-	$fileContent:=JSON Parse:C1218($text; 38)
-	return $fileContent
+	If ($jsonFile.exists)
+		$text:=$jsonFile.getText()
+		$fileContent:=JSON Parse:C1218($text; 38)
+		return $fileContent
+	Else 
+		return Null:C1517
+	End if 
 	
 	

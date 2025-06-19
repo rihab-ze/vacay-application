@@ -1399,6 +1399,18 @@
 						"datasource": {
 							"name": ""
 						}
+					},
+					{
+						"type": "navigation",
+						"id": "uEoBi84dy31uwpVwsaYuCk",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "login",
+						"isHardCoded": true
 					}
 				],
 				"icon": "fa-solid fa-arrow-right-from-bracket",
@@ -1411,7 +1423,8 @@
 					"justifyContent": "center",
 					"alignItems": "center",
 					"borderRadius": "10px",
-					"textAlign": "end"
+					"textAlign": "end",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Icon",
