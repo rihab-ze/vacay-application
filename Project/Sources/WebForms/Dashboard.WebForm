@@ -22,20 +22,20 @@
 						"events": [
 							"onChange"
 						],
-						"id": "aw1xnEp5wz2g5o1yNR1qdJ",
-						"method": "ds.Leaves.getRangeLength",
+						"id": "bmNCdHScJDSyGE88gAez5H",
+						"method": "ds.Leave.getRangeLength",
 						"params": [
 							{
 								"name": "dateRange",
-								"type": "collection",
+								"type": "Collection",
 								"datasource": "rangeDate",
-								"id": "9kvktfYSt3TRjeGDjssEtf"
+								"id": "seHkRWMREaAoytVg3j7kJ1"
 							}
 						],
 						"datasource": "",
 						"returns": {
 							"name": "result",
-							"type": "number",
+							"type": "Integer",
 							"datasource": "newLeave.rangeLength"
 						}
 					},

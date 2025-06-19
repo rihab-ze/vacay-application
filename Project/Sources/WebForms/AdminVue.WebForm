@@ -754,7 +754,8 @@
 			"hidden": false,
 			"nodes": [
 				"UIPq5adHjy",
-				"9t_U-4QZGm"
+				"9t_U-4QZGm",
+				"e-rJ_fzkQ7"
 			],
 			"linkedNodes": {}
 		},
@@ -866,6 +867,46 @@
 			"displayName": "Image",
 			"custom": {},
 			"parent": "DVBT9Xs-kQ",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"e-rJ_fzkQ7": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "dWrazKtohRDorqUNCpRX59",
+						"events": [
+							"onclick"
+						],
+						"action": "logout",
+						"actionType": "auth",
+						"datasource": {
+							"name": ""
+						}
+					}
+				],
+				"icon": "fa-solid fa-arrow-right-from-bracket",
+				"style": {
+					"color": "#ffffffff",
+					"backgroundColor": "#4FD1C5",
+					"width": "30px",
+					"height": "30px",
+					"display": "flex",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"borderRadius": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "8H2DNYK5AI",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
