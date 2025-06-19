@@ -93,7 +93,6 @@
 			"hidden": false,
 			"nodes": [
 				"nmAc6wrtSp",
-				"_rAnuO_60W",
 				"tlDsnrVEFr"
 			],
 			"linkedNodes": {}
@@ -407,68 +406,6 @@
 			"nodes": [
 				"BVqjyOpxGn"
 			],
-			"linkedNodes": {}
-		},
-		"_rAnuO_60W": {
-			"type": {
-				"resolvedName": "Button"
-			},
-			"isCanvas": false,
-			"props": {
-				"text": "log out",
-				"classNames": [],
-				"events": [
-					{
-						"type": "simple-action",
-						"id": "xrhurMGmHsGfwUcFpeXZi3",
-						"events": [
-							"onclick"
-						],
-						"action": "logout",
-						"actionType": "auth",
-						"datasource": {
-							"name": ""
-						}
-					}
-				],
-				"iconPosition": "hidden",
-				"style": {
-					"display": "none",
-					"backgroundColor": "#4FD1C5",
-					"height": "50px",
-					"width": "100%"
-				}
-			},
-			"displayName": "Button",
-			"custom": {
-				"states:sXe2fz9kmcki5PczdYoZPo": {
-					"style": {
-						"display": "block"
-					}
-				}
-			},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"icon": "o79ST0pp5X"
-			}
-		},
-		"o79ST0pp5X": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-regular fa-star"
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "_rAnuO_60W",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"ICWlgNvUqz": {

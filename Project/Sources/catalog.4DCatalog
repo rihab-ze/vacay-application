@@ -34,7 +34,6 @@
 		<field name="leave" uuid="F15870499D0EE4418B9F1D18C5F5CF0D" type="4" id="2"/>
 		<field name="type" uuid="D5A983C1CA67C1489EB96E8C6E335933" type="10" id="3"/>
 		<field name="date" uuid="F64D182DD438DF428A8DDFE301DE9F94" type="8" id="4"/>
-		<field name="by" uuid="BC63795574F10C4FBE9B1F9DE2110B46" type="4" id="5"/>
 		<field name="comment" uuid="235681F51F100D4BBB6DEBFCF3ED5EBB" type="10" id="6"/>
 		<field name="employee_ID" uuid="5B01529A5D25AA4A90B4A020BA5F2ACA" type="4" id="7"/>
 		<field name="message" uuid="817BA48D46683943944C47E542C396D4" type="10" limiting_length="255" id="8"/>
