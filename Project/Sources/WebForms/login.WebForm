@@ -162,9 +162,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Email",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Email",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -193,7 +194,8 @@
 				"style": {
 					"height": "100%",
 					"paddingLeft": "15px"
-				}
+				},
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -234,9 +236,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Pwd",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Pwd",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -265,7 +268,8 @@
 				"style": {
 					"height": "100%",
 					"paddingLeft": "15px"
-				}
+				},
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -317,7 +321,8 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#4FD1C5",
-					"height": "50px"
+					"height": "50px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -444,9 +449,9 @@
 				"classNames": [],
 				"events": [],
 				"style": {
-					"width": "100%",
-					"height": "50%",
-					"objectFit": "contain"
+					"objectFit": "contain",
+					"width": "300px",
+					"height": "300px"
 				},
 				"imgSrc": "/$shared/assets/images/Vacay.png",
 				"defaultImgSrc": "/$shared/assets/images/Vacay.png"

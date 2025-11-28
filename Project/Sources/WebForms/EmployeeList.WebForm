@@ -307,10 +307,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -376,7 +377,8 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -940,7 +942,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 40
+				"contentHeight": 39
 			},
 			"parent": "ZpWyOHEsnI",
 			"hidden": false,
@@ -1335,7 +1337,8 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#30BCAF",
-					"height": "42px"
+					"height": "42px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1398,7 +1401,10 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"icon": "fa-times"
+				"icon": "fa-times",
+				"style": {
+					"cursor": "pointer"
+				}
 			},
 			"displayName": "Icon",
 			"custom": {},
@@ -1683,13 +1689,14 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
 				"style": {
 					"display": "none"
 				},
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -1720,7 +1727,8 @@
 				"format": "#,##0",
 				"dataType": "number",
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1797,7 +1805,8 @@
 				"style": {
 					"display": "flex",
 					"height": "40px",
-					"backgroundColor": "#30BCAF"
+					"backgroundColor": "#30BCAF",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1901,7 +1910,10 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"icon": "fa-times"
+				"icon": "fa-times",
+				"style": {
+					"cursor": "pointer"
+				}
 			},
 			"displayName": "Icon",
 			"custom": {},

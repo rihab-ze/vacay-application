@@ -229,7 +229,8 @@
 					"paddingRight": "8px",
 					"paddingBottom": "8px",
 					"paddingTop": "8px",
-					"backgroundColor": "#30BCAF"
+					"backgroundColor": "#30BCAF",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "addLeaveTypeButton"
 			},
@@ -453,9 +454,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Name",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Name",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -489,7 +491,8 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -529,9 +532,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Description",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Description",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -559,13 +563,16 @@
 					"paddingBottom": "8px",
 					"paddingTop": "8px",
 					"borderRadius": "6px",
-					"height": "100%"
+					"height": "100%",
+					"minHeight": "100%",
+					"maxHeight": "100%"
 				},
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1067,9 +1074,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Color",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Color",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1098,7 +1106,8 @@
 				},
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1165,9 +1174,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Color",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Color",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1198,7 +1208,8 @@
 				},
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1563,10 +1574,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -1602,7 +1614,8 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1949,9 +1962,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Name",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Name",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1984,7 +1998,8 @@
 				"readonly": false,
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2025,9 +2040,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Description",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Description",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -2055,12 +2071,16 @@
 					"paddingBottom": "8px",
 					"paddingTop": "8px",
 					"borderRadius": "6px",
-					"height": "100%"
+					"height": "100%",
+					"minHeight": "100%",
+					"maxHeight": "100%"
 				},
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true,
+				"intervals": []
 			},
 			"displayName": "Input",
 			"custom": {},

@@ -238,7 +238,8 @@
 					"color": "#A0AEC0",
 					"justifyContent": "space-between",
 					"height": "54px",
-					"borderRadius": "15px"
+					"borderRadius": "15px",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "dashBoard"
 			},
@@ -356,7 +357,8 @@
 					"color": "#A0AEC0",
 					"justifyContent": "space-between",
 					"height": "54px",
-					"borderRadius": "15px"
+					"borderRadius": "15px",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "requests"
 			},
@@ -474,7 +476,8 @@
 					"color": "#A0AEC0",
 					"justifyContent": "space-between",
 					"height": "54px",
-					"borderRadius": "15px"
+					"borderRadius": "15px",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "calendar"
 			},
@@ -593,7 +596,8 @@
 					"color": "#A0AEC0",
 					"justifyContent": "space-between",
 					"height": "54px",
-					"borderRadius": "15px"
+					"borderRadius": "15px",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "settings"
 			},

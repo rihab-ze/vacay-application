@@ -2,7 +2,6 @@ singleton Class constructor()
 	
 /** In order to use the mailing class, you'll have to create an account with your email in the sendgrid email api , store your credentials in an env file somewhere in your project structure****\
 */
-	TRACE:C157
 	var $server : Object
 	var $transporter : Object
 	var $credentials:=ds:C1482.getCredentials()
@@ -21,7 +20,6 @@ Function sendMails($subject : Text; $body : Text; $receiver : Text)
 	var $email : Object:={}
 	var $status : Object
 	var $info : Text
-	TRACE:C157
 	If (This:C1470.server#Null:C1517)
 		$email.from:=""  //add the mail by which the api was created
 		$email.to:=$receiver
