@@ -71,7 +71,7 @@
 			"displayName": "Page Loader",
 			"custom": {
 				"states:somz6zEMQDaEkjDeebhGMT": {
-					"webform": "Home"
+					"webform": "HomePage"
 				}
 			},
 			"parent": "ROOT",
