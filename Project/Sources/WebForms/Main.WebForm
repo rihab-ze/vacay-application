@@ -273,7 +273,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "same-tab",
-						"target": "HomePage",
+						"target": "startPage",
 						"isHardCoded": true
 					}
 				],

@@ -1413,7 +1413,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "same-tab",
-						"target": "login",
+						"target": "startPage",
 						"isHardCoded": true
 					}
 				],

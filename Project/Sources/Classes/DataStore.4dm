@@ -3,7 +3,7 @@ Class extends DataStoreImplementation
 
 exposed Function authentify($email : Text; $password : Text) : Boolean
 	If (($email="") && ($password=""))
-		return Session:C1714.setPrivileges("guest")
+		return Session:C1714.setPrivileges(["guest"; "guestPromoted"])
 	End if 
 	var $employee : cs:C1710.EmployeeEntity:=ds:C1482.Employee.query("email = :1"; $email).first()
 	If ($employee#Null:C1517)
@@ -49,6 +49,7 @@ exposed Function removeCss($serverRef : Text; $cssClass : Text)
 	$component.removeCSSClass($cssClass)
 	
 exposed Function Login() : Text
+	TRACE:C157
 	var $user : cs:C1710.EmployeeEntity:=ds:C1482.Employee.getCurrentUser()
 	var $page : Text
 	Case of 

@@ -21,15 +21,60 @@
 				]
 			},
 			{
-				"applyTo": "Comment",
+				"applyTo": "Employee",
 				"type": "dataclass",
+				"read": [
+					"guestPromoted",
+					"manageEmployees"
+				],
 				"create": [
-					"manageComments"
+					"guestPromoted"
 				],
 				"update": [
+					"guestPromoted"
+				],
+				"drop": [
+					"guestPromoted"
+				]
+			},
+			{
+				"applyTo": "Leave",
+				"type": "dataclass",
+				"read": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"create": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"update": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"drop": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"execute": [
+					"manageLeaves"
+				]
+			},
+			{
+				"applyTo": "Comment",
+				"type": "dataclass",
+				"read": [
+					"guestPromoted"
+				],
+				"create": [
+					"guestPromoted",
 					"manageComments"
 				],
 				"drop": [
+					"guestPromoted",
+					"manageComments"
+				],
+				"update": [
 					"manageComments"
 				],
 				"execute": [
@@ -54,25 +99,6 @@
 				],
 				"update": [
 					"manageComments"
-				]
-			},
-			{
-				"applyTo": "Leave",
-				"type": "dataclass",
-				"read": [
-					"manageLeaves"
-				],
-				"create": [
-					"manageLeaves"
-				],
-				"update": [
-					"manageLeaves"
-				],
-				"drop": [
-					"manageLeaves"
-				],
-				"execute": [
-					"manageLeaves"
 				]
 			},
 			{
@@ -142,13 +168,6 @@
 				]
 			},
 			{
-				"applyTo": "Employee",
-				"type": "dataclass",
-				"read": [
-					"manageEmployees"
-				]
-			},
-			{
 				"applyTo": "Employee.getBalanceChart",
 				"type": "method",
 				"execute": [
@@ -159,48 +178,48 @@
 				"applyTo": "Employee.leaves",
 				"type": "attribute",
 				"read": [
-					"manage",
+					"administrate",
 					"employ",
-					"administrate"
+					"manage"
 				],
 				"create": [
-					"manage",
+					"administrate",
 					"employ",
-					"administrate"
+					"manage"
 				],
 				"update": [
-					"manage",
+					"administrate",
 					"employ",
-					"administrate"
+					"manage"
 				],
 				"drop": [
-					"manage",
+					"administrate",
 					"employ",
-					"administrate"
+					"manage"
 				]
 			},
 			{
 				"applyTo": "Employee.editBalance",
 				"type": "method",
 				"execute": [
-					"manage",
-					"administrate"
+					"administrate",
+					"manage"
 				]
 			},
 			{
 				"applyTo": "Employee.getBalance",
 				"type": "method",
 				"execute": [
-					"manage",
-					"administrate"
+					"administrate",
+					"manage"
 				]
 			},
 			{
 				"applyTo": "Leave.changeStatus",
 				"type": "method",
 				"execute": [
-					"manage",
-					"administrate"
+					"administrate",
+					"manage"
 				]
 			},
 			{
@@ -246,8 +265,8 @@
 			"includes": []
 		},
 		{
-			"id": "q4pLbZSJneeqe76M3sBCuq",
-			"privilege": "administrate",
+			"id": "u3cFLzyTevpF4pmAfYhCTM",
+			"privilege": "manage",
 			"includes": [
 				"manageEmployees",
 				"manageDataStore",
@@ -266,8 +285,8 @@
 			]
 		},
 		{
-			"id": "u3cFLzyTevpF4pmAfYhCTM",
-			"privilege": "manage",
+			"id": "q4pLbZSJneeqe76M3sBCuq",
+			"privilege": "administrate",
 			"includes": [
 				"manageEmployees",
 				"manageDataStore",

@@ -13,13 +13,36 @@
 				"id": "somz6zEMQDaEkjDeebhGMT",
 				"conditions": {
 					"id": "98xtF9JmTUmKBA1xvp4n9p",
-					"type": "privilege",
-					"name": "condition",
-					"value": "",
-					"valueType": "hardCoded",
-					"path": "",
-					"dsType": "",
-					"op": "haspriv"
+					"type": "combination",
+					"op": "or",
+					"conditions": [
+						{
+							"id": "6ofjJEsiNNP2fVikFCAfCJ",
+							"type": "privilege",
+							"name": "condition",
+							"value": "administrate",
+							"valueType": "hardCoded",
+							"path": "",
+							"dsType": "",
+							"op": "eq"
+						},
+						{
+							"id": "bD99KSdyqpAPfZ9SPxKJka",
+							"type": "privilege",
+							"name": "condition",
+							"value": "employ",
+							"valueType": "hardCoded",
+							"op": "eq"
+						},
+						{
+							"id": "wNCwLfix484ximkYUkn5Ak",
+							"type": "privilege",
+							"name": "condition",
+							"value": "manage",
+							"valueType": "hardCoded",
+							"op": "eq"
+						}
+					]
 				}
 			}
 		]
