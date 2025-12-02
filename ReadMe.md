@@ -60,18 +60,6 @@ To access and start using the application, open the project in Qodly Studio and 
 You can choose your preferred starting page depending on your workflow:
 - Set the starting page to Home if you want an overview of the entire application and its features.
 - Set the starting page to startPage if you want to land directly on the login process.
-Explore the different pages to discover all the available features of the system.
-####  Generate Initial Data  
-Go to your **Project Methods** in 4D and execute the method responsible for seeding the database.  
-This will automatically create the essential baseline data such as:
- 
-- Users
-- Leaves  
-- Leave requests
-- Public holidays 
-- Any required relational data  
- 
-Running this initialization step ensures the app loads correctly and all modules function as expected on first use.
  
 Open the project in **Qodly Studio** and run the application.  
 Explore the different pages to see all available features.
