@@ -624,7 +624,10 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"icon": "fa-times"
+				"icon": "fa-times",
+				"style": {
+					"cursor": "pointer"
+				}
 			},
 			"displayName": "Icon",
 			"custom": {},
@@ -686,7 +689,8 @@
 					"backgroundColor": "#A0AEC0",
 					"color": "#FFFFFF",
 					"width": "50%",
-					"height": "42px"
+					"height": "42px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -855,7 +859,8 @@
 					"display": "flex",
 					"backgroundColor": "#30BCAF",
 					"width": "50%",
-					"height": "42px"
+					"height": "42px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -950,10 +955,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -978,7 +984,8 @@
 					"paddingLeft": "12px",
 					"paddingRight": "12px",
 					"paddingBottom": "12px",
-					"paddingTop": "12px"
+					"paddingTop": "12px",
+					"maxHeight": "50px"
 				},
 				"placeholder": "Comment",
 				"datasource": "newComment.content",
@@ -986,7 +993,9 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true,
+				"intervals": []
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1055,9 +1064,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Number of days:",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Number of days:",
 				"style": {
 					"minWidth": "fit-content",
 					"fontWeight": "700",
@@ -1099,7 +1109,8 @@
 				"readOnly": false,
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1114,9 +1125,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Date de debut",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Date de debut",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1188,7 +1200,7 @@
 			"props": {
 				"events": [],
 				"style": {
-					"height": "fit-content",
+					"height": "100%",
 					"width": "31%",
 					"backgroundColor": "#ffffffff",
 					"borderRadius": "6px",
@@ -2266,7 +2278,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 48
+				"contentHeight": 47
 			},
 			"parent": "fAoB7E6G8y",
 			"hidden": false,

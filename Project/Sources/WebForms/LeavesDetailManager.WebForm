@@ -314,7 +314,8 @@
 				"iconPosition": "left",
 				"style": {
 					"display": "flex",
-					"backgroundColor": "#F44C4C"
+					"backgroundColor": "#F44C4C",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},
@@ -810,7 +811,8 @@
 				"style": {
 					"display": "flex",
 					"height": "40px",
-					"backgroundColor": "#119A8D"
+					"backgroundColor": "#119A8D",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},
@@ -1547,9 +1549,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "comment",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "comment",
 				"deletable": true,
 				"style": {
 					"display": "none"
@@ -1587,7 +1590,8 @@
 				"placeholder": "Add a comment...",
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2075,7 +2079,8 @@
 					"display": "flex",
 					"backgroundColor": "#A0AEC0",
 					"color": "#EAEBED",
-					"height": "40px"
+					"height": "40px",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},
@@ -2151,7 +2156,8 @@
 					"backgroundColor": "#FFFFFF",
 					"color": "#119A8D",
 					"borderWidth": "1px",
-					"borderColor": "#119A8D"
+					"borderColor": "#119A8D",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},
@@ -2301,9 +2307,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Request date:",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Request date:",
 				"style": {
 					"width": "180px",
 					"minWidth": "180px",
@@ -2340,7 +2347,8 @@
 				"readonly": false,
 				"disabled": true,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2404,9 +2412,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "<span data-slate-fragment=\"JTVCJTdCJTIydHlwZSUyMiUzQSUyMnBhcmFncmFwaCUyMiUyQyUyMmNoaWxkcmVuJTIyJTNBJTVCJTdCJTIydGV4dCUyMiUzQSUyMmQlQzMlQTlidXQlMjIlMkMlMjJib2xkJTIyJTNBZmFsc2UlMkMlMjJpdGFsaWMlMjIlM0FmYWxzZSUyQyUyMnVuZGVybGluZWQlMjIlM0FmYWxzZSUyQyUyMnN0cmlrZXRocm91Z2glMjIlM0FmYWxzZSU3RCU1RCU3RCU1RA==\" style=\"\">Starting date</span><span data-slate-fragment=\"JTVCJTdCJTIydHlwZSUyMiUzQSUyMnBhcmFncmFwaCUyMiUyQyUyMmNoaWxkcmVuJTIyJTNBJTVCJTdCJTIydGV4dCUyMiUzQSUyMmQlQzMlQTlidXQlMjIlMkMlMjJib2xkJTIyJTNBZmFsc2UlMkMlMjJpdGFsaWMlMjIlM0FmYWxzZSUyQyUyMnVuZGVybGluZWQlMjIlM0FmYWxzZSUyQyUyMnN0cmlrZXRocm91Z2glMjIlM0FmYWxzZSU3RCU1RCU3RCU1RA==\" style=\"white-space: pre;\">:</span>",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "<span data-slate-fragment=\"JTVCJTdCJTIydHlwZSUyMiUzQSUyMnBhcmFncmFwaCUyMiUyQyUyMmNoaWxkcmVuJTIyJTNBJTVCJTdCJTIydGV4dCUyMiUzQSUyMmQlQzMlQTlidXQlMjIlMkMlMjJib2xkJTIyJTNBZmFsc2UlMkMlMjJpdGFsaWMlMjIlM0FmYWxzZSUyQyUyMnVuZGVybGluZWQlMjIlM0FmYWxzZSUyQyUyMnN0cmlrZXRocm91Z2glMjIlM0FmYWxzZSU3RCU1RCU3RCU1RA==\" style=\"\">Starting date</span><span data-slate-fragment=\"JTVCJTdCJTIydHlwZSUyMiUzQSUyMnBhcmFncmFwaCUyMiUyQyUyMmNoaWxkcmVuJTIyJTNBJTVCJTdCJTIydGV4dCUyMiUzQSUyMmQlQzMlQTlidXQlMjIlMkMlMjJib2xkJTIyJTNBZmFsc2UlMkMlMjJpdGFsaWMlMjIlM0FmYWxzZSUyQyUyMnVuZGVybGluZWQlMjIlM0FmYWxzZSUyQyUyMnN0cmlrZXRocm91Z2glMjIlM0FmYWxzZSU3RCU1RCU3RCU1RA==\" style=\"white-space: pre;\">:</span>",
 				"style": {
 					"width": "180px",
 					"minWidth": "180px",
@@ -2442,7 +2451,8 @@
 				"placeholder": "",
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2506,9 +2516,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Ending date:",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Ending date:",
 				"style": {
 					"width": "180px",
 					"minWidth": "180px",
@@ -2544,7 +2555,8 @@
 				"placeholder": "",
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2608,7 +2620,8 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#EAEBED",
-					"color": "#A0AEC0"
+					"color": "#A0AEC0",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},
@@ -2746,7 +2759,8 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#A0AEC0",
-					"color": "#EAEBED"
+					"color": "#EAEBED",
+					"cursor": "pointer"
 				},
 				"serverSideRef": ""
 			},

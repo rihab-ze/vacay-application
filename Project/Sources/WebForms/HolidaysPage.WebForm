@@ -305,10 +305,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -367,7 +368,8 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -404,7 +406,8 @@
 					"paddingBottom": "8px",
 					"paddingTop": "8px",
 					"backgroundColor": "#30BCAF",
-					"minWidth": "fit-content"
+					"minWidth": "fit-content",
+					"cursor": "pointer"
 				},
 				"serverSideRef": "addHolidayButton"
 			},
@@ -524,7 +527,10 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"icon": "fa-times"
+				"icon": "fa-times",
+				"style": {
+					"cursor": "pointer"
+				}
 			},
 			"displayName": "Icon",
 			"custom": {},
@@ -633,9 +639,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Name",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "Name",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -669,7 +676,8 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -732,7 +740,8 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#30BCAF",
-					"height": "42px"
+					"height": "42px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -972,7 +981,8 @@
 					"color": "#e73351ff",
 					"borderWidth": "1px",
 					"borderColor": "#e73351ff",
-					"width": "110px"
+					"width": "110px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1032,13 +1042,14 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
 				"style": {
 					"display": "none"
 				},
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -1068,7 +1079,8 @@
 				"moveable": false,
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1182,7 +1194,8 @@
 					"display": "flex",
 					"height": "40px",
 					"backgroundColor": "#30BCAF",
-					"width": "110px"
+					"width": "110px",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1395,7 +1408,8 @@
 				"style": {
 					"display": "flex",
 					"width": "75px",
-					"backgroundColor": "#30BCAF"
+					"backgroundColor": "#30BCAF",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1450,7 +1464,8 @@
 					"color": "#30BCAF",
 					"backgroundColor": "#ffffffff",
 					"borderWidth": "2px",
-					"borderColor": "#30BCAF"
+					"borderColor": "#30BCAF",
+					"cursor": "pointer"
 				}
 			},
 			"displayName": "Button",
@@ -1487,7 +1502,10 @@
 			"props": {
 				"classNames": [],
 				"events": [],
-				"icon": "fa-times"
+				"icon": "fa-times",
+				"style": {
+					"cursor": "pointer"
+				}
 			},
 			"displayName": "Icon",
 			"custom": {},

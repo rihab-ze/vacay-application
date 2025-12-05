@@ -1,38 +1,80 @@
 {
 	"forceLogin": true,
+	"restrictedByDefault": false,
 	"permissions": {
 		"allowed": [
 			{
-				"applyTo": "ds.authentify",
+				"applyTo": "ds.generateData",
 				"type": "method",
 				"execute": [
 					"guest"
 				],
 				"promote": [
-					"login"
+					"guestPromoted"
 				]
 			},
 			{
-				"applyTo": "Employees",
-				"type": "dataclass",
-				"read": [
-					"guest",
-					"login"
-				],
+				"applyTo": "ds.getManifestObject",
+				"type": "method",
 				"execute": [
 					"guest"
 				]
 			},
 			{
-				"applyTo": "Comments",
+				"applyTo": "Employee",
 				"type": "dataclass",
+				"read": [
+					"guestPromoted",
+					"manageEmployees"
+				],
 				"create": [
-					"manageComments"
+					"guestPromoted"
 				],
 				"update": [
+					"guestPromoted"
+				],
+				"drop": [
+					"guestPromoted"
+				]
+			},
+			{
+				"applyTo": "Leave",
+				"type": "dataclass",
+				"read": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"create": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"update": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"drop": [
+					"guestPromoted",
+					"manageLeaves"
+				],
+				"execute": [
+					"manageLeaves"
+				]
+			},
+			{
+				"applyTo": "Comment",
+				"type": "dataclass",
+				"read": [
+					"guestPromoted"
+				],
+				"create": [
+					"guestPromoted",
 					"manageComments"
 				],
 				"drop": [
+					"guestPromoted",
+					"manageComments"
+				],
+				"update": [
 					"manageComments"
 				],
 				"execute": [
@@ -40,14 +82,14 @@
 				]
 			},
 			{
-				"applyTo": "Comments.create",
+				"applyTo": "Comment.create",
 				"type": "method",
 				"execute": [
 					"manageComments"
 				]
 			},
 			{
-				"applyTo": "Leaves.comments",
+				"applyTo": "Leave.comments",
 				"type": "attribute",
 				"read": [
 					"manageComments"
@@ -60,55 +102,36 @@
 				]
 			},
 			{
-				"applyTo": "LeaveActions.add",
+				"applyTo": "Holiday.getRangeDate",
 				"type": "method",
 				"execute": [
 					"manageLeaves"
 				]
 			},
 			{
-				"applyTo": "Leaves.filtering",
+				"applyTo": "Leave.add",
 				"type": "method",
 				"execute": [
 					"manageLeaves"
 				]
 			},
 			{
-				"applyTo": "Leaves.getRangeDate",
+				"applyTo": "Leave.filtering",
 				"type": "method",
 				"execute": [
 					"manageLeaves"
 				]
 			},
 			{
-				"applyTo": "Holidays.getRangeDate",
+				"applyTo": "Leave.getRangeDate",
 				"type": "method",
 				"execute": [
 					"manageLeaves"
 				]
 			},
 			{
-				"applyTo": "Leaves.add",
+				"applyTo": "LeaveAction.add",
 				"type": "method",
-				"execute": [
-					"manageLeaves"
-				]
-			},
-			{
-				"applyTo": "Leaves",
-				"type": "dataclass",
-				"read": [
-					"manageLeaves"
-				],
-				"create": [
-					"manageLeaves"
-				],
-				"update": [
-					"manageLeaves"
-				],
-				"drop": [
-					"manageLeaves"
-				],
 				"execute": [
 					"manageLeaves"
 				]
@@ -138,22 +161,21 @@
 				]
 			},
 			{
-				"applyTo": "Employees.getBalanceChart",
+				"applyTo": "Employee.getCurrentUser",
 				"type": "method",
 				"execute": [
 					"manageEmployees"
 				]
 			},
 			{
-				"applyTo": "Employees.getCurrentUser",
+				"applyTo": "Employee.getBalanceChart",
 				"type": "method",
 				"execute": [
-					"manageEmployees",
-					"administrate"
+					"manageEmployees"
 				]
 			},
 			{
-				"applyTo": "Employees.leaves",
+				"applyTo": "Employee.leaves",
 				"type": "attribute",
 				"read": [
 					"administrate",
@@ -177,7 +199,7 @@
 				]
 			},
 			{
-				"applyTo": "Leaves.changeStatus",
+				"applyTo": "Employee.editBalance",
 				"type": "method",
 				"execute": [
 					"administrate",
@@ -185,7 +207,7 @@
 				]
 			},
 			{
-				"applyTo": "Employees.editBalance",
+				"applyTo": "Employee.getBalance",
 				"type": "method",
 				"execute": [
 					"administrate",
@@ -193,7 +215,7 @@
 				]
 			},
 			{
-				"applyTo": "Employees.getBalance",
+				"applyTo": "Leave.changeStatus",
 				"type": "method",
 				"execute": [
 					"administrate",
@@ -201,14 +223,14 @@
 				]
 			},
 			{
-				"applyTo": "Holidays.update",
+				"applyTo": "Holiday.update",
 				"type": "method",
 				"execute": [
 					"administrate"
 				]
 			},
 			{
-				"applyTo": "Holidays.add",
+				"applyTo": "Holiday.add",
 				"type": "method",
 				"execute": [
 					"administrate"
@@ -218,8 +240,8 @@
 	},
 	"privileges": [
 		{
-			"id": "roBmVTe5mTJNkhnppMqpwp",
-			"privilege": "login",
+			"id": "qGy33XeA2ZjMp5D9agpro4",
+			"privilege": "guestPromoted",
 			"includes": []
 		},
 		{
