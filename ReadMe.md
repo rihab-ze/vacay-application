@@ -5,6 +5,7 @@
 This application is designed to simplify the management of employee breaks and vacation requests. It provides an intuitive interface for employees, managers, and administrators to submit, track, and manage vacation schedules seamlessly.
 
 It also serves as a demo showcasing the implementation of various **Qodly Studio components**, **custom components**, and **role-based access features**.
+![Dashboard](Project/Sources/Shared/visuals/Dashboard.png)
 
 ---
 
@@ -14,15 +15,25 @@ It also serves as a demo showcasing the implementation of various **Qodly Studio
 
 - **Dashboard**  
   View vacation balances and submit new vacation requests.
+  
+  ![modal](Project/Sources/Shared/visuals/modal.png)
+
 
 - **Requests Page**  
   Displays all vacation requests along with their statuses (approved, pending, rejected).
 
+  ![requests](Project/Sources/Shared/visuals/requests.png)
+
+
 - **Calendar View**  
   Allows users to check their approved requests in a calendar format.
 
+  ![calendar](Project/Sources/Shared/visuals/Calendar.png)
+
 - **Admin Settings Page**  
   Provides access to administrative tools and configuration options.
+  
+![holidays](Project/Sources/Shared/visuals/holidays.png)
 
 ---
 
