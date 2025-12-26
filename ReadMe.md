@@ -5,19 +5,36 @@ This demo app is built with 4D Qodly Pro and is meant to inspire you or help you
 
 The Vacay Scheduling Application simplifies the management of employee breaks and vacation requests across an organization. It enables employees to submit leave requests, managers to review and approve requests from their teams, and administrators to maintain leave types, holidays, and overall system configuration.
 
-## 🏠 Main Features
+It also serves as a demo showcasing the implementation of various **Qodly Studio components**, **custom components**, and **role-based access features**.
+![Dashboard](Project/Sources/Shared/visuals/Dashboard.png)
+
+---
+
+## 🧩 What the Application Covers
+
+### 🏠 Main Features
 
 - **Dashboard**  
   View vacation balances and submit new vacation requests.
+  
+  ![modal](Project/Sources/Shared/visuals/modal.png)
+
 
 - **Requests Page**  
   Displays all vacation requests along with their statuses (approved, pending, rejected).
 
+  ![requests](Project/Sources/Shared/visuals/requests.png)
+
+
 - **Calendar View**  
   Allows users to check their approved requests in a calendar format.
 
+  ![calendar](Project/Sources/Shared/visuals/Calendar.png)
+
 - **Admin Settings Page**  
   Provides access to administrative tools and configuration options.
+  
+![holidays](Project/Sources/Shared/visuals/holidays.png)
 
 ## How to run
  
