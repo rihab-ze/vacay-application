@@ -1,16 +1,11 @@
 # Vacay Scheduling Application
+This demo app is built with 4D Qodly Pro and is meant to inspire you or help you kickstart your own project.
 
 ## 🎯 Purpose of the Application
 
-This application is designed to simplify the management of employee breaks and vacation requests. It provides an intuitive interface for employees, managers, and administrators to submit, track, and manage vacation schedules seamlessly.
+The Vacay Scheduling Application simplifies the management of employee breaks and vacation requests across an organization. It enables employees to submit leave requests, managers to review and approve requests from their teams, and administrators to maintain leave types, holidays, and overall system configuration.
 
-It also serves as a demo showcasing the implementation of various **Qodly Studio components**, **custom components**, and **role-based access features**.
-
----
-
-## 🧩 What the Application Covers
-
-### 🏠 Main Features
+## 🏠 Main Features
 
 - **Dashboard**  
   View vacation balances and submit new vacation requests.
@@ -24,61 +19,123 @@ It also serves as a demo showcasing the implementation of various **Qodly Studio
 - **Admin Settings Page**  
   Provides access to administrative tools and configuration options.
 
----
-
-### 👥 User Roles
-
-- **Admin**  
-  Full access to all features and management capabilities.
-
-- **Manager**  
-  Can manage their own requests and those of their team.
-
-- **Employee**  
-  Can only view and manage their own requests.
-
----
-
-
-## 🚀 How to Integrate and Use the Application
-
-### 1. Clone or Import the Template
-
-Download or clone the project from the Github project link : ###.
-
-### 2. Configure Credentials
-To enable the mailing feature:
-
-1. Create an account with an email-sending API provider (e.g., **SendGrid**).
-2. Add your API credentials inside:
-Shared/credentials/env.json
-
-
-### 3. Launch the Application
-To access and start using the application, open the project in Qodly Studio and run the application.
-
-You can choose your preferred starting page depending on your workflow:
-- Set the starting page to Home if you want an overview of the entire application and its features.
-- Set the starting page to startPage if you want to land directly on the login process.
+## How to run
  
-Open the project in **Qodly Studio** and run the application.  
-Explore the different pages to see all available features.
+###  Pre-requisites (4D Software):
+- Download the latest Release version of 4D: [Product Download](https://us.4d.com/product-download/Feature-Release)
+- Or the latest Beta version: [Beta Program](https://discuss.4d.com/)
+- Follow activation steps: [Installation Guide](https://developer.4d.com/docs/GettingStarted/installation)
+ 
+### Steps to Run the Project
+- Clone or download this repository to your local machine. Need help? See Using GitHub with 4D.
+- Open the project in 4D: Go to File > Open Project (More details here: Open a Project)
+- Open Qodly Studio: Go to Design > Qodly Studio menu
+- Run the application: Click Run to start the server and preview the app in your browser
+ 
+## Configuration & Credentials
+ 
+This section explains exactly how to wire credentials and test the app (what to create, where to place files, and what the app already provides).
+ 
+### Do I need to create external accounts?
+  - Mailing: Yes — if you want emails to be sent (approvals, notifications) you should create an SMTP-capable account (or SMTP-compatible API service such as SendGrid SMTP).
+    - Example (SendGrid SMTP):
+     - Host: `smtp.sendgrid.net`
+     - Port: `587` (or 465 for SSL)
+     - User: `apikey` (SendGrid uses `apikey` as username)
+     - Password: `<your SendGrid API key>`
+ 
+### Where does the app read credentials?
+  - The loader is `Project/Sources/Classes/DataStore.4dm` function `getCredentials()`; it reads a JSON file from the path currently coded as `/PROJECT/Sources/Shared/assets/credentials/env.json`
+ 
+### What should the credentials file contain?
+  - Minimal example for SMTP (JSON):
+ 
+```json
+{
+  "host": "smtp.sendgrid.net",
+  "port": 587,
+  "user": "apikey",
+  "password": "SG.xxxxxx-your-sendgrid-key"
+}
+```
+ 
+### Security best-practices
+  - Do not commit real API keys to source control. Use `.gitignore` to exclude `env.json`, or keep real secrets in a secure vault and inject at deploy time
+ 
+### How to test email sending locally
+Provide SendGrid/SMTP credentials as above, then trigger an action that sends mail (e.g., leave approval that calls `Mailing.4dm:sendMails`).
+ 
+## Test accounts and sample data
+  - The app includes a data generator `Project/Sources/Classes/GenerateData.4dm` which creates sample users with known emails and passwords. You can call it from the UI (Home.WebForm) or run `ds.generateData()` in the server console.
 
-### 4. Test With Different Roles
-Log in using predefined test accounts or create new ones to test role behavior:
-
-- **Admin**
-- **Manager**
-- **Employee**
-
-Each role will present different permissions and interface options.
-
-### 5. Customize as Needed
-Feel free to extend the application according to your needs:
-
-- Modify or expand the **data model**
-- Add or redesign **UI elements**
-- Implement new **custom components**
-- Enhance or change the **business logic** (e.g., approval flow, notifications)
 
 
+
+## How to run
+ 
+###  Pre-requisites (4D Software):
+- Download the latest Release version of 4D: [Product Download](https://us.4d.com/product-download/Feature-Release)
+- Or the latest Beta version: [Beta Program](https://discuss.4d.com/)
+- Follow activation steps: [Installation Guide](https://developer.4d.com/docs/GettingStarted/installation)
+ 
+### Steps to Run the Project
+- Clone or download this repository to your local machine. Need help? See Using GitHub with 4D.
+- Open the project in 4D: Go to File > Open Project (More details here: Open a Project)
+- Open Qodly Studio: Go to Design > Qodly Studio menu
+- Run the application: Click Run to start the server and preview the app in your browser
+ 
+## Configuration & Credentials
+ 
+This section explains exactly how to wire credentials and test the app (what to create, where to place files, and what the app already provides).
+ 
+### Do I need to create external accounts?
+  - Mailing: Yes — if you want emails to be sent (approvals, notifications) you should create an SMTP-capable account (or SMTP-compatible API service such as SendGrid SMTP).
+    - Example (SendGrid SMTP):
+     - Host: `smtp.sendgrid.net`
+     - Port: `587` (or 465 for SSL)
+     - User: `apikey` (SendGrid uses `apikey` as username)
+     - Password: `<your SendGrid API key>`
+ 
+### Where does the app read credentials?
+  - The loader is `Project/Sources/Classes/DataStore.4dm` function `getCredentials()`; it reads a JSON file from the path currently coded as `/PROJECT/Sources/Shared/assets/credentials/env.json`
+ 
+### What should the credentials file contain?
+  - Minimal example for SMTP (JSON):
+ 
+```json
+{
+  "host": "smtp.sendgrid.net",
+  "port": 587,
+  "user": "apikey",
+  "password": "SG.xxxxxx-your-sendgrid-key"
+}
+```
+ 
+### Security best-practices
+  - Do not commit real API keys to source control. Use `.gitignore` to exclude `env.json`, or keep real secrets in a secure vault and inject at deploy time
+ 
+### How to test email sending locally
+Provide SendGrid/SMTP credentials as above, then trigger an action that sends mail (e.g., leave approval that calls `Mailing.4dm:sendMails`).
+ 
+## Test accounts and sample data
+  - The app includes a data generator `Project/Sources/Classes/GenerateData.4dm` which creates sample users with known emails and passwords. You can call it from the UI (Home.WebForm) or run `ds.generateData()` in the server console.
+
+## Where to find the code for each feature
+If you want to change the behavior or appearance of a specific feature, edit the files listed below.
+ 
+- Authentication / Login
+  - Code: `Project/Sources/Classes/DataStore.4dm` (method: `authentify`) — handles login, session privileges and landing page routing.
+  - UI: `Project/Sources/WebForms/login.WebForm` 
+ 
+- Dashboard (balances)
+  - UI: `Project/Sources/WebForms/Dashboard.WebForm`
+  - Code: `Project/Sources/Classes/Employee.4dm` (`getBalanceChart()`: Leave balance distribution by leave type for pie-chart visualization.
+)
+  
+- Holidays view
+  - UI: `Project/Sources/WebForms/HolidausPage.WebForm` .
+  - Code: `Project/Sources/Classes/Holiday.4dm` (`getRangeDate()`: Returns a collection containing the start and end dates of the leave.).
+  
+- Mailing / notifications
+  - Server: `Project/Sources/Classes/Mailing.4dm` — constructs SMTP transporter and sends emails.
+  - Credentials loader: `Project/Sources/Classes/DataStore.4dm` (function `getCredentials()` reads credentials file).

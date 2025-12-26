@@ -119,6 +119,7 @@
 						"externalLink": false,
 						"loader": "PUSmT2bcwo",
 						"parent": "webform-loader",
+						"isHardCoded": true,
 						"target": "HolidaysPage"
 					},
 					{
@@ -457,7 +458,8 @@
 						"externalLink": false,
 						"loader": "PUSmT2bcwo",
 						"parent": "webform-loader",
-						"target": "teams"
+						"isHardCoded": true,
+						"target": "Teams"
 					},
 					{
 						"type": "method",

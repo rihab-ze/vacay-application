@@ -28,12 +28,13 @@ exposed Function authentify($email : Text; $password : Text) : Boolean
 		Web Form:C1735.setError("Authentication failed")
 	End if 
 	
-	
+	//Adds a CSS class to a WebForm component dynamically
 exposed Function setCss($serverRef : Text; $cssClass : Text)
 	var $component : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$serverRef]
 	$component.addCSSClass($cssClass)
 	
+	//Shows or hides a “no data” state based on data length
 exposed Function noDATA($serverRef : Text; $cssClass : Text; $selectedLength : Variant)
 	var $component : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$serverRef]
@@ -43,13 +44,14 @@ exposed Function noDATA($serverRef : Text; $cssClass : Text; $selectedLength : V
 		$component.removeCSSClass($cssClass)
 	End if 
 	
+	//Dynamically removes a CSS class from a WebForm component
 exposed Function removeCss($serverRef : Text; $cssClass : Text)
 	var $component : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$serverRef]
 	$component.removeCSSClass($cssClass)
 	
+	//Resolves the post-login landing page based on the user’s role.
 exposed Function Login() : Text
-	TRACE:C157
 	var $user : cs:C1710.EmployeeEntity:=ds:C1482.Employee.getCurrentUser()
 	var $page : Text
 	Case of 
@@ -64,37 +66,7 @@ exposed Function Login() : Text
 	End case 
 	return $page
 	
-exposed Function navbar($serverRef : Text)
-	var $component : 4D:C1709.WebFormItem
-	Web Form:C1735[$serverRef].addCSSClass("activeNavButton")
-	Case of 
-		: ($serverRef="dashBoard")
-			Web Form:C1735["calendar"].removeCSSClass("activeNavButton")
-			Web Form:C1735["users"].removeCSSClass("activeNavButton")
-			Web Form:C1735["settings"].removeCSSClass("activeNavButton")
-			Web Form:C1735["requests"].removeCSSClass("activeNavButton")
-		: ($serverRef="requests")
-			Web Form:C1735["dashBoard"].removeCSSClass("activeNavButton")
-			Web Form:C1735["calendar"].removeCSSClass("activeNavButton")
-			Web Form:C1735["users"].removeCSSClass("activeNavButton")
-			Web Form:C1735["settings"].removeCSSClass("activeNavButton")
-		: ($serverRef="calendar")
-			Web Form:C1735["dashBoard"].removeCSSClass("activeNavButton")
-			Web Form:C1735["users"].removeCSSClass("activeNavButton")
-			Web Form:C1735["settings"].removeCSSClass("activeNavButton")
-			Web Form:C1735["requests"].removeCSSClass("activeNavButton")
-		: ($serverRef="users")
-			Web Form:C1735["dashBoard"].removeCSSClass("activeNavButton")
-			Web Form:C1735["calendar"].removeCSSClass("activeNavButton")
-			Web Form:C1735["settings"].removeCSSClass("activeNavButton")
-			Web Form:C1735["requests"].removeCSSClass("activeNavButton")
-		: ($serverRef="settings")
-			Web Form:C1735["dashBoard"].removeCSSClass("activeNavButton")
-			Web Form:C1735["users"].removeCSSClass("activeNavButton")
-			Web Form:C1735["calendar"].removeCSSClass("activeNavButton")
-			Web Form:C1735["requests"].removeCSSClass("activeNavButton")
-	End case 
-	
+	// Returns a breadcrumb string starting with "Home/" followed by the given path
 exposed Function breadcrumbs($path : Text) : Text
 	return "Home/"+$path
 	
@@ -151,7 +123,7 @@ exposed Function getCredentials() : Object
 	var $jsonFile : 4D:C1709.File
 	var $text : Text
 	var $fileContent : Object
-	$jsonFile:=File:C1566("/PROJECT/Sources/Shared/assets/credentials/env.json")  //fill the json file with your sendGrid api credentials
+	$jsonFile:=File:C1566("/PROJECT/Sources/Shared/assets/credentials/env.json")
 	If ($jsonFile.exists)
 		$text:=$jsonFile.getText()
 		$fileContent:=JSON Parse:C1218($text; 38)

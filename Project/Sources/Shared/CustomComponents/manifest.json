@@ -52,6 +52,19 @@
 		"url": "/$shared/CustomComponents/qodly_4b73e4fdf8fb53606fa0/"
 	},
 	{
+		"name": "qodly_pdfviewer",
+		"version": "0.3.0",
+		"scope": "qodly_5ce8a02fb01d4eb57667",
+		"author": {
+			"name": "Qodly Team",
+			"email": "contact@qodly.com",
+			"url": "https://qodly.com"
+		},
+		"module": "components",
+		"remoteEntryFileName": "components.js",
+		"url": "/$shared/CustomComponents/qodly_5ce8a02fb01d4eb57667/"
+	},
+	{
 		"name": "qodly_color_input",
 		"version": "0.3.0",
 		"scope": "qodly_882b282cbd97a14c33c0",

@@ -3,18 +3,23 @@ Class extends Entity
 exposed Function get fullName()->$fullName : Text
 	$fullName:=(This:C1470.firstName && This:C1470.lastName) ? (This:C1470.firstName+" "+Uppercase:C13(This:C1470.lastName; *)) : (Uppercase:C13(This:C1470.lastName; *) || This:C1470.firstName) || ""
 	
+	//Number of leave requests pending approval
 exposed Function get toValidateBalance()->$toValidateBalance : Integer
 	$toValidateBalance:=This:C1470.leaves.query("status == 'to be approved'").length
 	
+	//Number of approved leave requests
 exposed Function get approuvedBalance()->$approuvedBalance : Integer
 	$approuvedBalance:=This:C1470.leaves.query("status == 'approved'").length
 	
+	// Number of rejected leave requests
 exposed Function get nonValideBalance()->$nonValideBalance : Integer
 	$nonValideBalance:=This:C1470.leaves.query("status == 'rejected'").length
 	
+	//Total remaining leave balance for the employee
 exposed Function get balance()->$balance : Integer
 	$balance:=This:C1470.leaveBalances.sum("balance")
 	
+	//Assigns a team and initializes annual leave balance for a new employee.
 exposed Function addBalanceToNew($team : cs:C1710.TeamEntity)
 	var $leaveTypes : cs:C1710.LeaveTypeSelection:=ds:C1482.LeaveTypes.all()
 	var $leaveCongeAnnuel : cs:C1710.LeaveTypeEntity:=$leaveTypes.query("name = :1"; "Annual paid leave").first()
@@ -34,12 +39,13 @@ exposed Function addBalanceToNew($team : cs:C1710.TeamEntity)
 		This:C1470.save()
 	End if 
 	
+	//Leave balance distribution by leave type for pie-chart visualization.
 exposed Function getBalanceChart()->$pieChart : Collection
 	var $balance : cs:C1710.LeaveBalanceSelection
 	$balance:=This:C1470.leaveBalances
 	$pieChart:=$balance.extract("balance"; "value"; "leaveType.name"; "label"; "leaveType.color"; "color")
 	
-	
+	//Returns the employee’s leave balance for a given leave type, or null if not found
 exposed Function getBalance($leaveType : cs:C1710.LeaveTypeEntity) : cs:C1710.LeaveBalanceEntity
 	var $leave : cs:C1710.LeaveTypeEntity
 	If ($leaveType#Null:C1517)
@@ -52,6 +58,7 @@ exposed Function getBalance($leaveType : cs:C1710.LeaveTypeEntity) : cs:C1710.Le
 		End if 
 	End if 
 	
+	//Updates or creates an employee’s leave balance for a given leave type
 exposed Function editBalance($leaveType : cs:C1710.LeaveTypeEntity; $balance : Integer)
 	var $leaveT : cs:C1710.LeaveTypeEntity:=This:C1470.leaveBalances.leaveType.query("name = :1"; $leaveType.name).first()
 	var $leaveBalance : cs:C1710.LeaveBalanceEntity

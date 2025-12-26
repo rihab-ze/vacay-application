@@ -67,13 +67,6 @@
 				"depth": null
 			},
 			{
-				"id": "emptyRangeDate",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "array",
-				"initialValue": []
-			},
-			{
 				"id": "newComment",
 				"type": "entity",
 				"dataclass": "Comment",

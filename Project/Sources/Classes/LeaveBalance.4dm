@@ -24,7 +24,7 @@ exposed Function decrementBalance($leave : cs:C1710.LeaveEntity)
 		Web Form:C1735.setMessage("Leave balance saved successfully!")
 	End if 
 	
-	
+	//Adds 18 days to all employees’ annual leave on Jan 1, capped at 32 days
 exposed Function newYearBalance()
 	var $employees : cs:C1710.EmployeeSelection:=ds:C1482.Employee.all()
 	var $employee : cs:C1710.EmployeeEntity

@@ -15,7 +15,7 @@ exposed Function search($search : Text) : cs:C1710.EmployeeSelection
 		return This:C1470.all()
 	End if 
 	
-	
+	//Returns employees accessible to the user based on role
 exposed Function getSBEmployees($currentUser : cs:C1710.EmployeeEntity) : cs:C1710.EmployeeSelection
 	If ($currentUser.role="Admin")
 		return This:C1470.all()

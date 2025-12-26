@@ -27,13 +27,6 @@
 				"depth": null
 			},
 			{
-				"id": "name",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": ""
-			},
-			{
 				"id": "rangeDate",
 				"type": "scalar",
 				"namespace": "",

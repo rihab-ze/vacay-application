@@ -249,6 +249,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "webform-loader-self",
+						"isHardCoded": true,
 						"target": "LeavesList"
 					}
 				],
@@ -1937,32 +1938,9 @@
 			"parent": "5uWuUwOtPf",
 			"hidden": false,
 			"nodes": [
-				"4IWmIIBu_5",
+				"I-l98mDss3",
 				"0UqGQIcHdU"
 			],
-			"linkedNodes": {}
-		},
-		"4IWmIIBu_5": {
-			"type": {
-				"resolvedName": "Fallback"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"componentName": "Fallback",
-				"name": "",
-				"style": {
-					"height": "500px"
-				},
-				"datasource": "Shared:selectedLeave.uploadedFile",
-				"text": "Some Text"
-			},
-			"displayName": "Fallback",
-			"custom": {},
-			"parent": "gFDQSej-lr",
-			"hidden": false,
-			"nodes": [],
 			"linkedNodes": {}
 		},
 		"0UqGQIcHdU": {
@@ -2242,6 +2220,27 @@
 			"displayName": "Text",
 			"custom": {},
 			"parent": "1wiYn0z5Gp",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"I-l98mDss3": {
+			"type": {
+				"resolvedName": "PdfViewer"
+			},
+			"isCanvas": false,
+			"props": {
+				"name": "",
+				"classNames": [],
+				"events": [],
+				"datasource": "Shared:selectedLeave.uploadedFile",
+				"style": {
+					"height": "500px"
+				}
+			},
+			"displayName": "PdfViewer",
+			"custom": {},
+			"parent": "gFDQSej-lr",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

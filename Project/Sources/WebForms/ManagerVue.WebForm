@@ -15,6 +15,28 @@
 				"parentId": null,
 				"id": "rjXFzTJPoibXrCiDvj-ni"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "requestsPage",
+				"id": "8MQbCkUUvDzahL5nyRRv3k"
+			},
+			{
+				"label": "calendarPage",
+				"id": "cHWgNzXkfEJ3LkzFeVdiyK"
+			},
+			{
+				"label": "employeesPage",
+				"id": "jtQpw8qqEGMbNVx1QYDCvH"
+			},
+			{
+				"label": "settingsPage",
+				"id": "q9NvCZmNTCcho9xhUCFwT2"
+			}
 		]
 	},
 	"components": {
@@ -171,39 +193,25 @@
 				],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "qPb2rWGYXcQGto4Ay3Ba5T",
 						"events": [
 							"onclick"
 						],
-						"id": "f5cfHev2pyX8MxNPQACsYo",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "qdSXrmvFUFrSiqLTXw4hTp",
-								"isHardCoded": true,
-								"hardCodedValue": "dashBoard"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"q9NvCZmNTCcho9xhUCFwT2",
+								"jtQpw8qqEGMbNVx1QYDCvH"
+							]
 						}
-					},
-					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
-						"events": [
-							"onclick"
-						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "Dashboard"
 					},
 					{
 						"type": "method",
@@ -245,7 +253,20 @@
 				"serverSideRef": "dashBoard"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:8MQbCkUUvDzahL5nyRRv3k": {
+					"classNames": []
+				},
+				"states:cHWgNzXkfEJ3LkzFeVdiyK": {
+					"classNames": []
+				},
+				"states:jtQpw8qqEGMbNVx1QYDCvH": {
+					"classNames": []
+				},
+				"states:q9NvCZmNTCcho9xhUCFwT2": {
+					"classNames": []
+				}
+			},
 			"parent": "02SWAO146K",
 			"hidden": false,
 			"nodes": [],
@@ -290,39 +311,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "wMwS22rbxRy8u6HPJmnXmi",
 						"events": [
 							"onclick"
 						],
-						"id": "oioXuv3VNZFMJdBYpuMkvi",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "oVgSZDArTACRKg93XLBXs4",
-								"isHardCoded": true,
-								"hardCodedValue": "requests"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"jtQpw8qqEGMbNVx1QYDCvH",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "dBExz5sk9HLiWw9HKh21eT",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "LeavesList"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k"
+							]
+						}
 					},
 					{
 						"type": "method",
@@ -364,7 +388,13 @@
 				"serverSideRef": "requests"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:8MQbCkUUvDzahL5nyRRv3k": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "02SWAO146K",
 			"hidden": false,
 			"nodes": [],
@@ -409,39 +439,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "o3LhE6GNms1exkqXWV6ZxN",
 						"events": [
 							"onclick"
 						],
-						"id": "oioXuv3VNZFMJdBYpuMkvi",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "oVgSZDArTACRKg93XLBXs4",
-								"isHardCoded": true,
-								"hardCodedValue": "calendar"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"jtQpw8qqEGMbNVx1QYDCvH",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "6CdLiPDDSqR1ohFsEV4ut9",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "Calendar"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"cHWgNzXkfEJ3LkzFeVdiyK"
+							]
+						}
 					},
 					{
 						"type": "method",
@@ -483,7 +516,13 @@
 				"serverSideRef": "calendar"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:cHWgNzXkfEJ3LkzFeVdiyK": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "02SWAO146K",
 			"hidden": false,
 			"nodes": [],
@@ -528,39 +567,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "mMmQMG9AMttTCKXJ2shvRM",
 						"events": [
 							"onclick"
 						],
-						"id": "h98gLQcaUhNB2VgsKhuVEL",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "users",
-								"id": "o1hmotEY4uE3yb4Y365Tec",
-								"isHardCoded": true,
-								"hardCodedValue": "users"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "iuuUqePQvyLEv2MXNGLKWA",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "EmployeeList"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"jtQpw8qqEGMbNVx1QYDCvH"
+							]
+						}
 					},
 					{
 						"type": "method",
@@ -602,7 +644,13 @@
 				"serverSideRef": "users"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:jtQpw8qqEGMbNVx1QYDCvH": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "02SWAO146K",
 			"hidden": false,
 			"nodes": [],
@@ -647,40 +695,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "8hA9QLookZrvxW1iMPR9BG",
 						"events": [
 							"onclick"
 						],
-						"id": "mNSufcf4jKjW9fa4fZQ9Kw",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "8gLTx2mTe8v3ctp5Agv1ju",
-								"isHardCoded": true,
-								"hardCodedValue": "settings"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"jtQpw8qqEGMbNVx1QYDCvH"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "vYEa7z1Aq59Jv3KPztWGAD",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"isHardCoded": true,
-						"target": "Settings"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
+						}
 					},
 					{
 						"type": "method",
@@ -722,7 +772,13 @@
 				"serverSideRef": "settings"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:q9NvCZmNTCcho9xhUCFwT2": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "02SWAO146K",
 			"hidden": false,
 			"nodes": [],
@@ -801,39 +857,25 @@
 				],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "4nWzxiRT6NWvGkEkDnbSQ2",
 						"events": [
 							"onclick"
 						],
-						"id": "f5cfHev2pyX8MxNPQACsYo",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "qdSXrmvFUFrSiqLTXw4hTp",
-								"isHardCoded": true,
-								"hardCodedValue": "dashBoard"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"jtQpw8qqEGMbNVx1QYDCvH",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
-					},
-					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
-						"events": [
-							"onclick"
-						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "Dashboard"
 					}
 				],
 				"iconPosition": "left",
@@ -849,7 +891,20 @@
 				"serverSideRef": "dashBoard"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:8MQbCkUUvDzahL5nyRRv3k": {
+					"classNames": []
+				},
+				"states:cHWgNzXkfEJ3LkzFeVdiyK": {
+					"classNames": []
+				},
+				"states:jtQpw8qqEGMbNVx1QYDCvH": {
+					"classNames": []
+				},
+				"states:q9NvCZmNTCcho9xhUCFwT2": {
+					"classNames": []
+				}
+			},
 			"parent": "XB6q13TZaO",
 			"hidden": false,
 			"nodes": [],
@@ -894,39 +949,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "sg4LPwFsMZdo2jE8zU8eMZ",
 						"events": [
 							"onclick"
 						],
-						"id": "oioXuv3VNZFMJdBYpuMkvi",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "oVgSZDArTACRKg93XLBXs4",
-								"isHardCoded": true,
-								"hardCodedValue": "requests"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"jtQpw8qqEGMbNVx1QYDCvH",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "mFFHEHTs1YoGsNGDahWc9v",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "SrwlabXrtL",
-						"parent": "webform-loader",
-						"target": "LeavesList"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k"
+							]
+						}
 					}
 				],
 				"iconPosition": "left",
@@ -941,7 +999,13 @@
 				"serverSideRef": "requests"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:8MQbCkUUvDzahL5nyRRv3k": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "XB6q13TZaO",
 			"hidden": false,
 			"nodes": [],
@@ -986,39 +1050,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "9Tc6g1du7XNEKzeQzxNE7c",
 						"events": [
 							"onclick"
 						],
-						"id": "oioXuv3VNZFMJdBYpuMkvi",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "oVgSZDArTACRKg93XLBXs4",
-								"isHardCoded": true,
-								"hardCodedValue": "calendar"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"jtQpw8qqEGMbNVx1QYDCvH",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "iLvY54NHomKsowGE19zMj2",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "kFrXv8tqwq",
-						"parent": "webform-loader",
-						"target": "Calendar"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"cHWgNzXkfEJ3LkzFeVdiyK"
+							]
+						}
 					}
 				],
 				"iconPosition": "left",
@@ -1034,7 +1101,13 @@
 				"serverSideRef": "calendar"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:cHWgNzXkfEJ3LkzFeVdiyK": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "XB6q13TZaO",
 			"hidden": false,
 			"nodes": [],
@@ -1079,39 +1152,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "3JyVNnKwHMirWdCZLsPCKV",
 						"events": [
 							"onclick"
 						],
-						"id": "h98gLQcaUhNB2VgsKhuVEL",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "users",
-								"id": "o1hmotEY4uE3yb4Y365Tec",
-								"isHardCoded": true,
-								"hardCodedValue": "users"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "itFd1R9VqanF7Er7QZXL8V",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "kFrXv8tqwq",
-						"parent": "webform-loader",
-						"target": "EmployeeList"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"jtQpw8qqEGMbNVx1QYDCvH"
+							]
+						}
 					}
 				],
 				"iconPosition": "left",
@@ -1127,7 +1203,13 @@
 				"serverSideRef": "users"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:jtQpw8qqEGMbNVx1QYDCvH": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "XB6q13TZaO",
 			"hidden": false,
 			"nodes": [],
@@ -1172,39 +1254,42 @@
 				"classNames": [],
 				"events": [
 					{
-						"type": "method",
-						"dataclass": "DataStore",
+						"type": "simple-action",
+						"id": "hLnK3cBfeRWcakE84N2H99",
 						"events": [
 							"onclick"
 						],
-						"id": "mNSufcf4jKjW9fa4fZQ9Kw",
-						"method": "ds.navbar",
-						"params": [
-							{
-								"name": "serverRef",
-								"type": "string",
-								"datasource": "",
-								"id": "8gLTx2mTe8v3ctp5Agv1ju",
-								"isHardCoded": true,
-								"hardCodedValue": "settings"
-							}
-						],
-						"datasource": "",
-						"returns": {
-							"name": "result",
-							"type": "Variable"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "delete",
+							"states": [
+								"8MQbCkUUvDzahL5nyRRv3k",
+								"cHWgNzXkfEJ3LkzFeVdiyK",
+								"jtQpw8qqEGMbNVx1QYDCvH"
+							]
 						}
 					},
 					{
-						"type": "navigation",
-						"id": "hUkZKhGNYURsi361MsR2o6",
+						"type": "simple-action",
+						"id": "tADYQzMy9YoYak5i4RVpTZ",
 						"events": [
 							"onclick"
 						],
-						"externalLink": false,
-						"loader": "kFrXv8tqwq",
-						"parent": "webform-loader",
-						"target": "Settingsv2"
+						"action": "",
+						"actionType": "state",
+						"datasource": {
+							"name": ""
+						},
+						"state": {
+							"action": "add",
+							"states": [
+								"q9NvCZmNTCcho9xhUCFwT2"
+							]
+						}
 					}
 				],
 				"iconPosition": "left",
@@ -1220,7 +1305,13 @@
 				"serverSideRef": "settings"
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:q9NvCZmNTCcho9xhUCFwT2": {
+					"classNames": [
+						"activeNavButton"
+					]
+				}
+			},
 			"parent": "XB6q13TZaO",
 			"hidden": false,
 			"nodes": [],
@@ -1465,7 +1556,20 @@
 				"style": {}
 			},
 			"displayName": "Page Loader",
-			"custom": {},
+			"custom": {
+				"states:8MQbCkUUvDzahL5nyRRv3k": {
+					"webform": "LeavesList"
+				},
+				"states:cHWgNzXkfEJ3LkzFeVdiyK": {
+					"webform": "Calendar"
+				},
+				"states:jtQpw8qqEGMbNVx1QYDCvH": {
+					"webform": "EmployeeList"
+				},
+				"states:q9NvCZmNTCcho9xhUCFwT2": {
+					"webform": "Settings"
+				}
+			},
 			"parent": "eMI8GAPi1p",
 			"hidden": false,
 			"nodes": [],
